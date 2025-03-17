@@ -3,7 +3,7 @@ import React from "react"
 // import Octicons from "@expo/vector-icons/Octicons"
 import { Tabs } from "expo-router"
 import { icons } from "@/constants"
-import { View, Image, Text } from "react-native"
+import { View, Image } from "react-native"
 
 // function TabBarIcon(props: {
 //   name: React.ComponentProps<typeof Octicons>["name"]
@@ -33,10 +33,14 @@ export default function TabLayout() {
         tabBarActiveTintColor: "#FFA001",
         tabBarInactiveTintColor: "#CDCDE0",
         tabBarShowLabel: true,
-        tabBarLabelStyle: { fontSize: 12 }, // ขนาดตัวอักษรของ Tab
+        tabBarLabelStyle: { 
+          fontSize: 12,
+          fontFamily: "NotoSansThai-Light",
+          marginTop: 5,
+        },
         tabBarStyle: {
           backgroundColor: "#161622",
-          borderTopWidth: 1,
+          borderTopWidth: 0,
           borderTopColor: "#232533",
           height: 70,
           paddingTop: 5,
@@ -59,19 +63,19 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="profile"
+        name="bookmark"
         options={{
-          title: "Profile",
+          title: "Bookmark",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
-              icon={icons.profile}
+              icon={icons.bookmark}
               color={color}
               focused={focused}
             />
           ),
         }}
-      />
+      />    
 
       <Tabs.Screen
         name="create"
@@ -89,13 +93,13 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="bookmark"
+        name="profile"
         options={{
-          title: "Bookmark",
+          title: "Profile",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
-              icon={icons.bookmark}
+              icon={icons.profile}
               color={color}
               focused={focused}
             />
