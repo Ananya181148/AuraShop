@@ -11,7 +11,7 @@ export default function ProductCard({
   onPress
 }: any) {
   return (
-    <Pressable onPress={onPress} className="flex flex-col shadow-md my-[1px] bg-gray-900 rounded-lg">
+    <Pressable onPress={onPress} className="flex flex-col shadow-md my-[1px] bg-gray-800 rounded-lg">
       <Image
         source={{uri: productimage}}
         className="w-full h-64"
